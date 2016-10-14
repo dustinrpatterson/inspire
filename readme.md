@@ -1,7 +1,7 @@
 ##Inspire
 
 Inspiration can be difficult to achieve. Keep track of your many important tasks and the weather with the suttle help of a random daily quote and beatiful scenery.   
-
+ 
 ###The Setup
 
 This time around you are being thrown into a mix of several files and some basic structure. Take some time to look at the files. Remember services are used for getting and mainting the data integrity. Controllers are for manipulating the DOM.
