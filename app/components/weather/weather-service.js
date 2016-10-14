@@ -5,6 +5,7 @@ function WeatherService() {
 
 
 	this.getWeather = function (callWhenDone) {
+	
 		var w = localStorage.getItem('weather');
 		if (w) {
 			w = JSON.parse(w);
