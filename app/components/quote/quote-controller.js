@@ -14,10 +14,15 @@
 		quoteTemplate += `
 		<div class="quoteCard">
 			<h2>"${results.quote}"</h2>
-			<p>- ${results.author}</p>
 		</div>
 		`
 		quoteElem.append(quoteTemplate);
+		$('#quote').hover(function () {
+            $(this).append($(`<span> - ${results.author}</span>`));
+        },
+            function () {
+                $(this).find("span:last").remove();
+            });
 	}
 
 }

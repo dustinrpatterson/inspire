@@ -2,36 +2,37 @@
     function TodoController() {
 
         var todoService = new TodoService();
-        update(todoService.getTodos());
-
+        todoService.newItem = todoService.getTodos();
+        update();
 
         $('form').on('submit', function (e) {
             e.preventDefault();
-            var temp = this.listItem.value;
-            todoService.newItem = todoService.getTodos();
+            var temp = this.listItem.value;            
             todoService.newItem.push(temp);
             todoService.saveTodos(todoService.newItem);
-            update(todoService.getTodos());
+            update();
         })
 
-        function update(list) {
+        $('#list').on('click', '.delete', function () {
+            todoService.removeTodos(this.id);
+            update()
+        })
+
+        function update() {
+            var list = todoService.getTodos()
             var listElem = $('#list');
-                var template = '';
+            var taskTemplate = `<h3>Number of tasks: ${list.length}</h3>`
+            var template = '';
             for (var i = 0; i < list.length; i++) {
-				listElem.empty();
+                listElem.empty();
                 template += `
-                <li>${list[i]}</li>`
+               <li id="${i}">${list[i]}
+                <button class="delete" id="${i}">X</button></li>`
             }
-            listElem.append(template);
-
-        }
-
+			listElem.empty().append(taskTemplate, template);
+        }        
     }
-
-
-
-
 
     TodoController();
 
-	}()) //closes iife
+} ())
