@@ -19,13 +19,23 @@ function WeatherController(){
 		weatherTemplate += `
 		<div class="weatherCard">
 			<p>${results.name}</p>
-			<p>${fahrenheit} &#8457</p>
-			<p>${celsius} &#8451</p>
+			<div id="weatherButton">
+			<p><button id="fTemp">${fahrenheit} &#8457</button>
+			<button id="cTemp">${celsius} &#8451</button></p>
+			</div>
 			<img src="http://openweathermap.org/img/w/${results.weather[0].icon}.png">
 			<p>${results.weather[0].description}</p>
 		</div>
 		`
 		weatherElem.append(weatherTemplate);
+
+		$('#cTemp').hide();
+
+		$('#weatherButton').on('click', function () {
+        	$('#fTemp').toggle();
+       	 	$('#cTemp').toggle();
+    })
+
 	}
 
 } //closes WeatherController
@@ -33,3 +43,6 @@ function WeatherController(){
 WeatherController()
 
 }()) //closes iife
+
+
+
