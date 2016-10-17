@@ -10,7 +10,6 @@ function ImageController(){
 	//function to update DOM for imageService
 	function updateImage(data){
 		console.log(data)
-		debugger
 		var results = JSON.parse(data)
 		var imageElem = $('#body')
 		var imageTemplate =`
