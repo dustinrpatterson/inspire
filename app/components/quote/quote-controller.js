@@ -17,7 +17,7 @@
 		</div>
 		`
 		quoteElem.append(quoteTemplate);
-		$('#quote').hover(function () {
+		$('#quote').hover(function () {	
             $(this).append($(`<span>  - ${results.author}</span>`));
         },
             function () {
