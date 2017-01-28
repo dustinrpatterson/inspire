@@ -20,7 +20,6 @@ function TodoService() {
     }
 
     this.removeTodos = function (id) {
-        debugger
         for (var i = 0; i < this.newItem.length; i++) {
             var oldItem = this.newItem[i];
             if (id == i) {

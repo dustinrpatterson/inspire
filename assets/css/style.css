@@ -3,19 +3,22 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size:100%;
+    font-family: 'Patrick Hand SC', cursive;
 }
 
 .flexbox{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 10px;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin: 10px;
 }
 
 .flexbox2{
     display: flex;
     flex-direction: column;
-    justify-content: space-between
+    justify-content: space-between;
+    min-height: 100%;
 }
 
 .weather {
@@ -36,8 +39,8 @@ body{
     border: 2px solid black;
     border-radius: 5px;
     text-align: center;
-    align-self: flex-end;
-    flex: 1;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -48,15 +51,25 @@ body{
     text-align: left;
     border: 2px solid black;
     border-radius: 5px;
-    font-size: 15;
+    font-size: 20;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+}
+
+li{
+    margin:2px;
+    font-size: 15px;
+}
+
+h3{
+    margin-top: 0px;
 }
 
 .clock{
     color: limegreen;
-    font-size: 200;
+    font-size: 100;
     text-align: center;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-shadow: 0 0 50px yellowgreen;
+    font-family: 'Press Start 2P', cursive;
 }
 

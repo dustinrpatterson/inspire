@@ -2,13 +2,11 @@ function startTime() {
     var today = new Date();
     var h = today.getHours();
     var m = today.getMinutes();
-    var s = today.getSeconds();
     var convention = timeOfDay(h)
     m = checkTime(m);
-    s = checkTime(s);
     h = notMilitary(h);
     document.getElementById('clock').innerHTML =
-    h + ":" + m + ":" + s + " " + convention;
+    h + ":" + m + " " + convention;
     var t = setTimeout(startTime, 500);
 }
 
